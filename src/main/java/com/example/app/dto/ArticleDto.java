@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public class ArticleDto {
 
+	//To response API
     public record Response(
             UUID id,
             String title,
