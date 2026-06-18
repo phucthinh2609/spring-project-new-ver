@@ -1,0 +1,77 @@
+# =========================================================================
+# 1. MAVEN & BUILD TARGETS (Bỏ qua thư mục build)
+# =========================================================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Nếu bạn dùng Maven Wrapper (.mvn/wrapper/maven-wrapper.jar thường được giữ lại)
+!.mvn/wrapper/maven-wrapper.jar
+
+# =========================================================================
+# 2. IDE SPECIFIC (Bỏ qua cấu hình riêng của các IDE)
+# =========================================================================
+# Eclipse IDE
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+*.beaninfo
+factorypath
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+# =========================================================================
+# 3. APACHE LUCENE (Bỏ qua các file chỉ mục Lucene sinh ra khi chạy local)
+# =========================================================================
+# Dự án của bạn có dùng Lucene 10.x. Tránh commit index local lên Git.
+# Hãy đổi tên 'lucene-index/' thành đúng folder index bạn cấu hình trong code (nếu có)
+lucene-index/
+*index*/
+
+# =========================================================================
+# 4. LOGS & TEMPORARY FILES (Bỏ qua log và file tạm)
+# =========================================================================
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# =========================================================================
+# 5. OPENREWRITE & PLUGINS (Bỏ qua báo cáo sửa code tự động)
+# =========================================================================
+.rewrite/
+rewrite.patch
+
+# =========================================================================
+# 6. APPLICATION CONFIGURATIONS (Bảo mật thông tin nhạy cảm)
+# =========================================================================
+# Giữ lại file cấu hình mặc định, nhưng bỏ qua các file chứa cấu hình database/JWT local
+# application.properties hoặc application.yml chứa thông tin mật (PostgreSQL password, JWT secret)
+# Khuyên dùng: chỉ commit application.properties gốc, không commit bản local/dev bí mật.
+# application-local.properties
+# application-dev.yml
